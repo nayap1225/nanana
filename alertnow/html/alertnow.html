@@ -387,6 +387,18 @@ $(document).ready(function() {
 			disableOnInteraction: false,
 		},
 	});
+
+	$('.tech_desc_list li').on('mouseenter',function () {
+		techSwiper.autoplay.stop();
+		var $this = $(this), _idx = $this.index();
+		techSwiper.slideToLoop(_idx, 1000);
+		$this.addClass('active').siblings().removeClass('active');
+	});
+
+	$('.tech_desc_list li').on('mouseleave',function () {
+		techSwiper.autoplay.start();
+	});
+
 	techSwiper.on('slideChange', function () {
         var changeSlideIdx = techSwiper.realIndex,
             _tabActive = $('.tech_desc_list').find('li').eq(changeSlideIdx);

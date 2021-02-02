@@ -163,7 +163,7 @@ input[type="search"]::-webkit-search-decoration {-webkit-appearance: none;}
 #footer_wrap .inner:after {content: ""; display: table; clear: both;}
 #footer_wrap .f_cont_l {position: relative; width: 334px; float: left;}
 #footer_wrap .f_cont_l:after {content: ""; display: block; position: absolute; left: 192px; top: 0; bottom: 0; width: 1px; background: rgba(255,255,255,.25);}
-#footer_wrap .f_logo {width: 142px; height: 43px; background: url(../images/flogo.png) no-repeat center top;}
+#footer_wrap .f_logo {width: 142px; height: 43px; font-size: 0; text-indent: -9999px; background: url(../images/flogo.png) no-repeat center top;}
 #footer_wrap .links {margin: 20px 0 0 4px;}
 #footer_wrap .links a {display: block; font-size: 14px; color: #fff; transition: opacity .3s ease;}
 #footer_wrap .links a:hover {opacity: .5;}
@@ -205,17 +205,16 @@ input[type="search"]::-webkit-search-decoration {-webkit-appearance: none;}
 .kv_wrap .animate_box .alert_box [class*=alert0] {display: none; position: absolute;}
 .kv_wrap .animate_box .alert_box .alert01 {left: 74px; top: 55px; width: 96px; height: 49px; background: url(../images/img_alert_01.png) no-repeat center top;}
 .kv_wrap .animate_box .alert_box .alert02 {left: 59px; top: 39px; width: 98px; height: 50px; background: url(../images/img_alert_02.png) no-repeat center top;}
-.kv_wrap .animate_box .alert_box .alert01.on {display: block;}
 .kv_wrap .animate_box .alert_box .alert01.on,
 .kv_wrap .animate_box .alert_box .alert02.on {display: block;}
-.kv_wrap .animate_box .lamp {position: absolute; left: 520px; top: 594px; width: 64px; height: 24px; background: url(../images/bg_flicker.png) no-repeat center top; opacity: 0; visibility: hidden; animation: flicker .7s cubic-bezier(1, 0, 0, 1) infinite; animation-fill-mode: backwards;}
+.kv_wrap .animate_box .lamp {position: absolute; left: 520px; top: 594px; width: 64px; height: 24px; background: url(../images/bg_flicker.png) no-repeat center top; opacity: 0; visibility: hidden;}
 .kv_wrap .animate_box .graph_box {position: absolute; right: 46px; bottom: 210px; width: 194px; height: 290px;}
 .kv_wrap .animate_box .graph_box .pie {position: absolute; left: 32px; top: 39px; width: 92px; height: 97px; background: url(../images/img_pie.png) no-repeat center top;}
-.kv_wrap .animate_box .graph_box .piece {position: absolute; left: 79px; top: 59px; /* left: 81px; top: 39px; */ width: 31px; height: 29px; background: url(../images/img_piece.png) no-repeat center top; transition: left .2s ease, top .2s ease;}
-.kv_wrap .animate_box .graph_box .line01 {position: absolute; left: 125px; top: 50px; width: 0; height: 47px; background: url(../images/img_line01.png) no-repeat center top; transition: width .3s ease;}
-.kv_wrap .animate_box .graph_box .line02 {position: absolute; left: 32px; top: 136px; width: 0; height: 67px; background: url(../images/img_line02.png) no-repeat center top; transition: width .3s ease;}
-.kv_wrap .animate_box .graph_box .line03 {position: absolute; left: 80px; top: 250px; width: 0; height: 4px; background: url(../images/img_line03.png) no-repeat center top; transition: width .3s ease;}
-.kv_wrap .animate_box .graph_box .piece.on {left: 81px; top: 39px;}
+.kv_wrap .animate_box .graph_box .piece {position: absolute; left: 79px; top: 60px; width: 31px; height: 29px; background: url(../images/img_piece.png) no-repeat center top;}
+.kv_wrap .animate_box .graph_box .line01 {position: absolute; left: 125px; top: 50px; width: 0; height: 47px; background: url(../images/img_line01.png) no-repeat center top;}
+.kv_wrap .animate_box .graph_box .line02 {position: absolute; left: 32px; top: 136px; width: 0; height: 67px; background: url(../images/img_line02.png) no-repeat center top;}
+.kv_wrap .animate_box .graph_box .line03 {position: absolute; left: 80px; top: 250px; width: 0; height: 4px; background: url(../images/img_line03.png) no-repeat center top;}
+.kv_wrap .animate_box .graph_box .piece.on {left: 88px; top: 47px;}
 .kv_wrap .animate_box .graph_box .line01.on {width: 43px;}
 .kv_wrap .animate_box .graph_box .line02.on {width: 135px;}
 .kv_wrap .animate_box .graph_box .line03.on {width: 87px;}
@@ -294,7 +293,6 @@ input[type="search"]::-webkit-search-decoration {-webkit-appearance: none;}
 .section_tech .tech_desc_list li:nth-child(6):after {top: 2px; left: 15px; transform: rotate(180deg);}
 .section_tech .tech_desc_list li:nth-child(7):after {top: 4px; left: 15px; transform: rotate(230deg);}
 
-
 .section_down {text-align: center; background: #fff;}
 .section_down .inner {padding: 90px 0 171px;}	
 .section_down .inner .heading {margin-bottom: 15px; font-size: 40px; line-height: 50px; font-weight: 700;}
@@ -344,5 +342,15 @@ input[type="search"]::-webkit-search-decoration {-webkit-appearance: none;}
 .section_ready .inner {padding: 102px 0 93px;}
 .section_ready .heading {margin-bottom: 53px; font-size: 46px; color: #283958; line-height: 50px; font-weight: 700;}
 .section_ready .btn_orange {width: 381px; height: 69px; font-size: 24px; color: #fafafa; line-height: 72px; border-radius: 4px;}
+
+
+/******************* 
+	애니메이션 css : 1초 -> 1 s
+*******************/
+.kv_wrap .animate_box .lamp {animation: flicker .7s cubic-bezier(1, 0, 0, 1) infinite; animation-fill-mode: backwards;} /* 램프 깜박임 .7s -> 0.7초 간격 */
+.kv_wrap .animate_box .graph_box .piece {transition: left .4s cubic-bezier(0.445, 0.05, 0.55, 0.95), top .4s cubic-bezier(0.445, 0.05, 0.55, 0.95);} /* 그래프 이동시간 : 0.4초 */
+.kv_wrap .animate_box .graph_box .line01 {transition: width .3s ease;} /* 그래프 박스 첫번째 라인 이동시간 : 0.4초 */
+.kv_wrap .animate_box .graph_box .line02 {transition: width .3s ease;} /* 그래프 박스 두번째 라인 이동시간 : 0.4초 */
+.kv_wrap .animate_box .graph_box .line03 {transition: width .3s ease;} /* 그래프 박스 세번째 라인 이동시간 : 0.4초 */
 
 
